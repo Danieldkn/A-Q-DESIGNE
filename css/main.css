@@ -53,7 +53,7 @@ header{
     flex-wrap: wrap;
     flex-direction: row;
     height: 500px;
-    width: 100%;
+    width: 500px;
     align-items: center;
     align-content: center;
     justify-content: space-evenly;

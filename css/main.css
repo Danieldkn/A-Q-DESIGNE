@@ -354,6 +354,7 @@ h1{
 .barra{
     height: 4rem;
     transition: 1s;
+    background: none;
 }
 .barra:hover{
     margin: 10px;

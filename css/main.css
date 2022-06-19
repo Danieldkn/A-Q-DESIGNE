@@ -5,17 +5,19 @@
 header{
     display: flex;
     justify-content: space-evenly;
+    font-size: 1.2rem;
     font-family: 'Julius Sans One', sans-serif;
 }
 .body-home{
     width: 100%;
-    height: 600px;
+    height: 400px;
     align-content: center;
     background-image: url(../img/fondo1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position-x: center;
+    justify-content: space-evenly;
 }
 .main-home{
     display: flex;
@@ -24,18 +26,20 @@ header{
     justify-content: space-evenly;
     flex-direction: column;
     text-align: center;
-    width: 99%;
+    width: 100%;
     height:500px;
     font-family: 'Julius Sans One', sans-serif;
 }
 .main-nosotros{
     display: flex;
     flex-wrap: wrap;
-    height: 500px;
+    height: 400px;
+    width: 100%;
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
     font-family: 'Julius Sans One', sans-serif;
+
 }
 .main-productos{
     display: flex;
@@ -46,19 +50,22 @@ header{
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
+    justify-items: flex-start;
     font-family: 'Julius Sans One', sans-serif;
+    overflow: auto;
 }
 .main-galeria{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     height: 500px;
-    width: 500px;
+    width: 100%;
     align-items: center;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: center;
     font-family: 'Julius Sans One', sans-serif;
     overflow: hidden;
+    border: 2px solid white;
 }
 .main-contacto{
     display: flex;
@@ -159,6 +166,7 @@ fieldset{
     text-align: center;
     transition: .5s;
     overflow: hidden;
+    margin: 1rem;
 }
 .producto:hover{
     height: 330px;
@@ -185,27 +193,30 @@ fieldset{
     transition: .4s;
 }
 .texto-nosotros1{
-    width: 700px;
-    height: 250px;
-    font-size: 1.2rem;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-    text-align: start;
-    font-family: 'Julius Sans One', sans-serif;
-}
-.texto-nosotros2{
-    padding-top: 2rem;
-    width: 700px;
+    width: 400px;
     height: 200px;
     font-size: 1.2rem;
     align-items: center;
     align-content: center;
     justify-content: center;
     justify-items: center;
-    text-align: start;
+    text-align: center;
     font-family: 'Julius Sans One', sans-serif;
+    overflow: auto;
+}
+.texto-nosotros2{
+    padding-top: 2rem;
+    width: 400px;
+    height: 200px;
+    font-size: 1.2rem;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+
+    font-family: 'Julius Sans One', sans-serif;
+    overflow: auto;
 }
 .texto-creacion{
     display: flex;
@@ -239,6 +250,7 @@ fieldset{
 .boton-c:hover{
     background-color: aqua;
     transition: 1s;
+    color: black;
 }
 .red-t{
     transition: .2s;
@@ -297,7 +309,7 @@ fieldset{
     align-content: center;
     background-position: center;
     width: 100%;
-    height: 600px;
+    height: 400px;
 }
 .body-galeria{
     background-image: url(../img/fondo-galeria.jpg);
@@ -330,6 +342,12 @@ h1{
     align-content: center;
     background-color: none;
     font-size: 2rem;
+    color: white;
+    padding: 1rem;
+}
+.a-q{
+    font-size: 3rem;
+    color: rgba(206, 191, 219, 1);
 }
 .designe{
     font-size: 1rem;
@@ -344,15 +362,17 @@ h1{
     color: rgb(243, 219, 243);
 }
 .boton-izquierdo{
-    border-left: solid .5px;
+    border-left: solid .1px;
     border-bottom: solid;
     color: white;
     display: inline-block;
     border-bottom-left-radius: 2rem;
     transition: 1.4s ease all;
+    background: none;
+    background-color: none;
 }
 .barra{
-    height: 4rem;
+    height: 3rem;
     transition: 1s;
     background: none;
 }
@@ -361,7 +381,7 @@ h1{
     transition: 1s
 }
 .boton-izquierdo:hover{
-    color: aqua;
+    color: rgba(232, 7, 237, 1);
     transition: 1s;
 }
 .boton-seleccionado{
@@ -376,15 +396,19 @@ h1{
     transition: 1s;
 }
 .boton-centro:hover{
-    color: red;
+    color: rgba(232, 7, 237, 1);
     transition: 1s;
 }
 .boton-derecho{
-    border-right: solid .5px;
+    border-right: solid .2px;
     border-bottom: solid;
     color: white;
     display: inline-block;
     border-bottom-right-radius: 2rem;
+}
+.boton-derecho:hover{
+    color: rgba(232, 7, 237, 1);
+    transition: 1s;
 }
 h2{
     color: white;
@@ -427,7 +451,7 @@ legend{
 }
 footer{
     height: 50px;
-    text-align: center; 
+    text-align: end; 
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -468,3 +492,103 @@ footer{
     align-items: center;
     gap: 5px;
 }
+
+/*media*/
+
+@media (max-width: 376px) and (min-width:300px){
+    .main-productos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 400px;
+        width: 100%;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: space-evenly;
+        justify-items: flex-start;
+        font-family: 'Julius Sans One', sans-serif;
+        overflow: auto;}
+        footer{
+            margin: 1rem;
+        }
+}
+               
+
+@media (max-width: 700px) and (min-width:376px){
+    .a-q{
+        font-size: 2rem;
+    }
+    .designe{
+        font-size: .8rem;
+    }
+    .creacion{
+        font-size: 2.8rem;
+    }
+    .texto-creacion{
+        display: flex;
+        width: 300px;
+        height: 50px;
+        align-items: center;
+        text-align: center;
+        align-content: space-between;
+    }
+    .boton-c{
+        width: 150px;
+        height: 60px;
+        border-radius: 2rem;
+        background-color: rgba(232, 7, 237, 1);
+        opacity: .5;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: 1s ease all;
+        border-color: white;
+        font-size: 1rem;
+        color: white;
+    }
+    .main-home{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        height: 500px;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    .boton-izquierdo{
+        background-color: black;
+        border-bottom-left-radius: 0rem;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        border-left: .5px solid white;
+        border-right: .5px solid white;
+    }
+    .boton-centro{
+        background-color: black;
+        border-left: .5px solid white;
+        border-right: .5px solid white;
+    }
+    .boton-derecho{
+        background-color: black;
+        border-left: .5px solid white;
+        border-bottom-left-radius: 2rem;
+        border-bottom: none;
+    }
+    .main-productos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 700px;
+        width: 100%;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: space-evenly;
+        justify-items: flex-start;
+        font-family: 'Julius Sans One', sans-serif;
+        overflow: auto;}
+        footer{
+            margin: 1rem;
+        }
+
+    }

@@ -1,0 +1,184 @@
+//mixin
+@mixin fondo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position: center;
+}
+@mixin basic {
+    display: flex;
+    width: 99%;
+    height:500px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+//diseño de Header
+header{
+    background: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    justify-content: space-evenly;
+    font-family: 'Julius Sans One', sans-serif;
+    h1{
+        color: white;
+    }
+    p{
+        color: white;
+    }
+    nav{
+        border: 1px solid white;
+        border-radius: 2rem;
+    }
+}
+
+//diseño de home
+.body-home{
+    background-image: url(../img/fondo1.jpg);
+    @include fondo;
+    main{
+        @include basic;
+        align-items: center;
+        align-content: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+        font-family: 'Julius Sans One', sans-serif;
+        p{
+            color: white;
+            font-size: 3rem;
+        }
+        button{
+            border: 1px solid white;
+            background-color: chartreuse;
+            opacity: .7;
+            box-shadow: 3px 3px;
+            display: flex;
+            width: 200px;
+            height: 80px;
+            align-items: center;
+            padding: 10px;
+            justify-content: center;
+            justify-items: center;
+            align-content: center;
+            text-align: center;
+            border-radius: 2rem
+        }
+    }
+}
+
+//diseño de nosotros
+.body-nosotros{
+    background-image: url(../img/fondo-nosotros.jpg);
+    @include fondo;
+    main{
+        @include basic;
+    }
+}
+
+//diseño de productos
+.body-productos{
+    background-image: url(../img/fondo-productos.jpg);
+    @include fondo;
+    main{
+        @include basic;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: space-evenly;
+        font-family: 'Julius Sans One', sans-serif;
+        }
+        .producto{
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-evenly;
+            border: 1px solid white;
+            width: 200px;
+            height: 200px;
+            justify-content: center;
+            text-align: center;
+            transition: .5s;
+            overflow: hidden;
+            .img-producto{
+                width: 150px;
+                height: 150px;
+                padding: 25px;
+            }
+            p{
+                width: 200px;
+                height: 40px;
+                color: white;
+            }
+        }
+}
+
+//diseño de galeria
+.body-galeria{
+    background-image: url(../img/fondo-galeria.jpg);
+    @include fondo;
+    main{
+        @include basic;
+    }
+}
+
+//diseño de contacto
+.body-contacto{
+    background-image: url(../img/fondo-contacto.jpg);
+    @include fondo;
+    main{
+        @include basic;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: space-evenly;
+        overflow: hidden;
+        .formulario{
+            width: 20rem;
+            height: 30rem;
+            text-align: center;
+            .formulario-estilo{
+                width: 20rem;
+                height: 30rem;
+                fieldset{
+                    color: white;
+                    width: 20rem;
+                    height: 30rem;
+                    border: 1px solid white;
+                    border-radius: 3rem;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: space-evenly;
+                    font-family: 'Julius Sans One', sans-serif;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+//diseño de footer
+footer{
+    height: 50px;
+    text-align: center; 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: space-evenly;
+    padding: 3px 1rem;
+    .redes{
+        background: none;
+        cursor: pointer;
+        border: none;
+    }
+}

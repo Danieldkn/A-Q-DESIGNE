@@ -12,7 +12,22 @@
     height:500px;
     font-family: 'Julius Sans One', sans-serif;
 }
-
+@mixin text {
+    display: flex;
+    width: 550px;
+    height: 250px;
+    font-size: 1.3rem;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+}
+%img {
+    width: 350px;
+    height: 200px
+}
 //diseño de Header
 header{
     background: none;
@@ -23,10 +38,14 @@ header{
     justify-content: space-evenly;
     font-family: 'Julius Sans One', sans-serif;
     h1{
-        color: white;
+        color: rgba(206, 191, 219, 1);
+        padding-top: 1rem;
+        font-size: 3rem;
+        height: 4rem;
     }
     p{
         color: white;
+        padding-bottom: .4rem;
     }
     nav{
         border: 1px solid white;
@@ -36,19 +55,29 @@ header{
 
 //diseño de home
 .body-home{
-    background-image: url(../img/fondo1.jpg);
+    background-image: url(../img/fondo.png);
     @include fondo;
     main{
         @include basic;
+        display: flex;
         align-items: center;
         align-content: center;
         justify-content: space-evenly;
         flex-direction: column;
         text-align: center;
         font-family: 'Julius Sans One', sans-serif;
+        .texto-creacion{
+            text-align: center;
+            border-radius: 3rem;
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            background-color: rgba(243,243,243,0.2);
+        }
         p{
+            text-align: center;
             color: white;
             font-size: 3rem;
+            text-shadow: 7rem white;
         }
         button{
             border: 1px solid white;
@@ -69,15 +98,62 @@ header{
     }
 }
 
+//diseño home phone
+@media (max-width: 700px) and (min-width: 400px) {
+    .body-home{
+        main{
+            p{
+                color: white;
+                font-size: 2.5rem;
+                margin-left: 1rem;
+                text-align: center;
+            }
+        }
+    }
+}
+@media (max-width: 992px) and (min-width: 700px) {
+    body-home{
+        main{
+            p{
+                color: white;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
 //diseño de nosotros
 .body-nosotros{
     background-image: url(../img/fondo-nosotros.jpg);
     @include fondo;
     main{
         @include basic;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        color: white;
+        align-content: center;
+        justify-content: space-evenly;
+        font-family: 'Julius Sans One', sans-serif;
+        overflow: auto;
+        .texto-uno{
+           @include text;
+        }
+        .texto-dos{
+            @include text;
+        }
+        .img-nosotros{
+            @extend %img;
+        }
+
     }
 }
-
+//diseño nosotros media
+@media (max-width: 700px) and (min-width: 400px) {
+    
+}
+@media (max-width: 992px) and (min-width: 700px) {
+    
+}
 //diseño de productos
 .body-productos{
     background-image: url(../img/fondo-productos.jpg);
@@ -114,7 +190,13 @@ header{
             }
         }
 }
-
+//diseño productos media
+@media (max-width: 700px) and (min-width: 400px) {
+    
+}
+@media (max-width: 992px) and (min-width: 700px) {
+    
+}
 //diseño de galeria
 .body-galeria{
     background-image: url(../img/fondo-galeria.jpg);
@@ -123,7 +205,13 @@ header{
         @include basic;
     }
 }
-
+//diseño galeria media
+@media (max-width: 700px) and (min-width: 400px) {
+    
+}
+@media (max-width: 992px) and (min-width: 700px) {
+    
+}
 //diseño de contacto
 .body-contacto{
     background-image: url(../img/fondo-contacto.jpg);
@@ -143,6 +231,11 @@ header{
             .formulario-estilo{
                 width: 20rem;
                 height: 30rem;
+                text-align: center;
+                border-radius: 3rem;
+                -webkit-backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px);
+                background-color: rgba(243,243,243,0.2);
                 fieldset{
                     color: white;
                     width: 20rem;
@@ -165,7 +258,13 @@ header{
         }
     }
 }
-
+//diseño contacto media
+@media (max-width: 700px) and (min-width: 400px) {
+    
+}
+@media (max-width: 992px) and (min-width: 700px) {
+    
+}
 //diseño de footer
 footer{
     height: 50px;
@@ -181,4 +280,11 @@ footer{
         cursor: pointer;
         border: none;
     }
+}
+//diseño footer media
+@media (max-width: 700px) and (min-width: 400px) {
+    
+}
+@media (max-width: 992px) and (min-width: 700px) {
+    
 }

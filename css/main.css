@@ -1,3 +1,7 @@
+.body-nosotros main .img-nosotros {
+  width: 350px;
+  height: 200px; }
+
 header {
   background: none;
   display: flex;
@@ -7,15 +11,19 @@ header {
   justify-content: space-evenly;
   font-family: 'Julius Sans One', sans-serif; }
   header h1 {
-    color: white; }
+    color: #cebfdb;
+    padding-top: 1rem;
+    font-size: 3rem;
+    height: 4rem; }
   header p {
-    color: white; }
+    color: white;
+    padding-bottom: .4rem; }
   header nav {
     border: 1px solid white;
     border-radius: 2rem; }
 
 .body-home {
-  background-image: url(../img/fondo1.jpg);
+  background-image: url(../img/fondo.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -26,15 +34,24 @@ header {
     width: 99%;
     height: 500px;
     font-family: 'Julius Sans One', sans-serif;
+    display: flex;
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
     flex-direction: column;
     text-align: center;
     font-family: 'Julius Sans One', sans-serif; }
+    .body-home main .texto-creacion {
+      text-align: center;
+      border-radius: 3rem;
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px);
+      background-color: rgba(243, 243, 243, 0.2); }
     .body-home main p {
+      text-align: center;
       color: white;
-      font-size: 3rem; }
+      font-size: 3rem;
+      text-shadow: 7rem white; }
     .body-home main button {
       border: 1px solid white;
       background-color: chartreuse;
@@ -51,6 +68,18 @@ header {
       text-align: center;
       border-radius: 2rem; }
 
+@media (max-width: 700px) and (min-width: 400px) {
+  .body-home main p {
+    color: white;
+    font-size: 2.5rem;
+    margin-left: 1rem;
+    text-align: center; } }
+
+@media (max-width: 992px) and (min-width: 700px) {
+  body-home main p {
+    color: white;
+    font-size: 2.5rem; } }
+
 .body-nosotros {
   background-image: url(../img/fondo-nosotros.jpg);
   background-repeat: no-repeat;
@@ -62,7 +91,37 @@ header {
     display: flex;
     width: 99%;
     height: 500px;
-    font-family: 'Julius Sans One', sans-serif; }
+    font-family: 'Julius Sans One', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    align-content: center;
+    justify-content: space-evenly;
+    font-family: 'Julius Sans One', sans-serif;
+    overflow: auto; }
+    .body-nosotros main .texto-uno {
+      display: flex;
+      width: 550px;
+      height: 250px;
+      font-size: 1.3rem;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      justify-items: center;
+      text-align: center;
+      font-family: 'Julius Sans One', sans-serif; }
+    .body-nosotros main .texto-dos {
+      display: flex;
+      width: 550px;
+      height: 250px;
+      font-size: 1.3rem;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      justify-items: center;
+      text-align: center;
+      font-family: 'Julius Sans One', sans-serif; }
 
 .body-productos {
   background-image: url(../img/fondo-productos.jpg);
@@ -139,7 +198,12 @@ header {
       text-align: center; }
       .body-contacto main .formulario .formulario-estilo {
         width: 20rem;
-        height: 30rem; }
+        height: 30rem;
+        text-align: center;
+        border-radius: 3rem;
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        background-color: rgba(243, 243, 243, 0.2); }
         .body-contacto main .formulario .formulario-estilo fieldset {
           color: white;
           width: 20rem;

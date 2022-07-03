@@ -68,6 +68,7 @@ header{
         }
     }
 }
+
 //diseño de home
 .body-home{
     background-image: url(../img/fondo.png);
@@ -147,6 +148,7 @@ header{
         }
     }
 }
+
 //diseño de nosotros
 .body-nosotros{
     @include fondo;
@@ -169,6 +171,7 @@ header{
         }
     }
 }
+
 //diseño nosotros media
 @media (max-width: 700px) and (min-width: 400px) {
         .body-nosotros{
@@ -183,8 +186,9 @@ header{
         }
 }
 @media (max-width: 992px) and (min-width: 700px) {
-    
+   
 }
+
 //diseño de productos
 .body-productos{
     background-image: url(../img/fondo-productos.png);
@@ -241,6 +245,7 @@ header{
             transition: .4s;
         }
 }
+
 //diseño productos media
 @media (max-width: 700px) and (min-width: 400px) {
     
@@ -248,6 +253,7 @@ header{
 @media (max-width: 992px) and (min-width: 700px) {
     
 }
+
 //diseño de galeria
 .body-galeria{
     background-image: url(../img/fondo-galeria.png);
@@ -257,6 +263,7 @@ header{
         justify-content: space-evenly;
     }
 }
+
 //diseño galeria media
 @media (max-width: 700px) and (min-width: 400px) {
     
@@ -264,6 +271,7 @@ header{
 @media (max-width: 992px) and (min-width: 700px) {
     
 }
+
 //diseño de contacto
 .body-contacto{
     background-image: url(../img/fondo-contacto.png);
@@ -310,6 +318,7 @@ header{
         }
     }
 }
+
 //diseño contacto media
 @media (max-width: 700px) and (min-width: 400px) {
     
@@ -317,6 +326,7 @@ header{
 @media (max-width: 992px) and (min-width: 700px) {
     
 }
+
 //diseño de footer
 footer{
     height: 50px;
@@ -333,6 +343,7 @@ footer{
         border: none;
     }
 }
+
 //diseño footer media
 @media (max-width: 700px) and (min-width: 400px) {
     
@@ -340,6 +351,7 @@ footer{
 @media (max-width: 992px) and (min-width: 700px) {
     
 }
+
 .texto-uno{
     grid-area: texto-uno;
 }

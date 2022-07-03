@@ -1,7 +1,3 @@
-.body-nosotros main .img-nosotros {
-  width: 350px;
-  height: 200px; }
-
 header {
   background: none;
   display: flex;
@@ -11,16 +7,24 @@ header {
   justify-content: space-evenly;
   font-family: 'Julius Sans One', sans-serif; }
   header h1 {
-    color: #cebfdb;
     padding-top: 1rem;
     font-size: 3rem;
     height: 4rem; }
+    header h1 a {
+      text-decoration: none;
+      color: #cebfdb; }
   header p {
     color: white;
     padding-bottom: .4rem; }
   header nav {
     border: 1px solid white;
     border-radius: 2rem; }
+
+@media (max-width: 700px) and (min-width: 400px) {
+  body header h1 {
+    font-size: 2.3rem; }
+  body header .titulo-uno {
+    font-size: .8rem; } }
 
 .body-home {
   background-image: url(../img/fondo.png);
@@ -50,7 +54,7 @@ header {
     .body-home main p {
       text-align: center;
       color: white;
-      font-size: 3rem;
+      font-size: 2.8rem;
       text-shadow: 7rem white; }
     .body-home main button {
       border: 1px solid white;
@@ -67,13 +71,17 @@ header {
       align-content: center;
       text-align: center;
       border-radius: 2rem; }
+    .body-home main a {
+      text-decoration: none; }
 
 @media (max-width: 700px) and (min-width: 400px) {
   .body-home main p {
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-left: 1rem;
-    text-align: center; } }
+    text-align: center; }
+  .main-nosotros {
+    grid-template-areas: "texto-uno" "imagen-nosotros" "texto-dos" "imagen-dos"; } }
 
 @media (max-width: 992px) and (min-width: 700px) {
   body-home main p {
@@ -81,50 +89,35 @@ header {
     font-size: 2.5rem; } }
 
 .body-nosotros {
-  background-image: url(../img/fondo-nosotros.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position-x: center;
-  background-position: center; }
-  .body-nosotros main {
-    display: flex;
+  background-position: center;
+  background-image: url(../img/fondo-nosotros.png); }
+  .body-nosotros .main-nosotros {
+    display: grid;
+    grid-template-areas: "texto-uno imagen-nosotros" "imagen-dos texto-dos";
+    justify-content: center;
+    text-align: center;
+    color: white;
     width: 99%;
     height: 500px;
     font-family: 'Julius Sans One', sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    color: white;
-    align-content: center;
-    justify-content: space-evenly;
-    font-family: 'Julius Sans One', sans-serif;
-    overflow: auto; }
-    .body-nosotros main .texto-uno {
-      display: flex;
-      width: 550px;
-      height: 250px;
-      font-size: 1.3rem;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
-      justify-items: center;
-      text-align: center;
-      font-family: 'Julius Sans One', sans-serif; }
-    .body-nosotros main .texto-dos {
-      display: flex;
-      width: 550px;
-      height: 250px;
-      font-size: 1.3rem;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
-      justify-items: center;
-      text-align: center;
-      font-family: 'Julius Sans One', sans-serif; }
+    font-size: 1.3rem;
+    column-gap: 3rem; }
+    .body-nosotros .main-nosotros .img-nosotros {
+      width: 390px;
+      height: 220px; }
+
+@media (max-width: 700px) and (min-width: 400px) {
+  .body-nosotros .main-nosotros {
+    grid-template-areas: "texto-uno" "imagen-nosotros" "texto-dos" "imagen-dos";
+    overflow-y: scroll;
+    font-size: 1.1rem; } }
 
 .body-productos {
-  background-image: url(../img/fondo-productos.jpg);
+  background-image: url(../img/fondo-productos.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -153,16 +146,33 @@ header {
     transition: .5s;
     overflow: hidden; }
     .body-productos .producto .img-producto {
-      width: 150px;
-      height: 150px;
-      padding: 25px; }
+      width: 200px;
+      height: 200px;
+      padding: 30px; }
     .body-productos .producto p {
       width: 200px;
       height: 40px;
       color: white; }
+  .body-productos .producto:hover {
+    height: 390px;
+    transition: .5s;
+    border: 1px solid aqua; }
+  .body-productos .boton-comprar {
+    width: 100px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 3rem;
+    background: none;
+    color: white;
+    transition: .3s; }
+  .body-productos .boton-comprar:hover {
+    width: 110px;
+    height: 35px;
+    border: 1px solid aqua;
+    transition: .4s; }
 
 .body-galeria {
-  background-image: url(../img/fondo-galeria.jpg);
+  background-image: url(../img/fondo-galeria.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -172,10 +182,11 @@ header {
     display: flex;
     width: 99%;
     height: 500px;
-    font-family: 'Julius Sans One', sans-serif; }
+    font-family: 'Julius Sans One', sans-serif;
+    justify-content: space-evenly; }
 
 .body-contacto {
-  background-image: url(../img/fondo-contacto.jpg);
+  background-image: url(../img/fondo-contacto.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -235,3 +246,15 @@ footer {
     background: none;
     cursor: pointer;
     border: none; }
+
+.texto-uno {
+  grid-area: texto-uno; }
+
+.imagen-nosotros {
+  grid-area: imagen-nosotros; }
+
+.imagen-dos {
+  grid-area: imagen-dos; }
+
+.texto-dos {
+  grid-area: texto-dos; }

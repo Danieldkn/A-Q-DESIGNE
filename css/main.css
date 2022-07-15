@@ -118,9 +118,9 @@ header {
   .body-nosotros .main-nosotros {
     grid-template-areas: "texto-uno" "imagen-nosotros" "texto-dos" "imagen-dos";
     overflow-y: scroll;
-    font-size: 1rem; }
+    font-size: .8rem; }
     .body-nosotros .main-nosotros .img-nosotros {
-      width: 320px;
+      width: 310px;
       height: 220px; } }
 
 @media (max-width: 992px) and (min-width: 700px) {
@@ -202,6 +202,35 @@ header {
     height: 500px;
     font-family: 'Julius Sans One', sans-serif;
     justify-content: space-evenly; }
+    .body-galeria main .carousel {
+      width: 500px;
+      height: 500px; }
+    .body-galeria main .carousel-item img {
+      width: 100%; }
+
+@media (max-width: 700px) and (min-width: 320px) {
+  .body-galeria {
+    background-image: url(../img/fondo-galeria.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position: center; }
+    .body-galeria main {
+      display: flex;
+      width: 99%;
+      height: 400px;
+      font-family: 'Julius Sans One', sans-serif;
+      justify-content: space-evenly;
+      align-items: center;
+      align-content: center;
+      justify-items: center;
+      padding-left: .5rem; }
+      .body-galeria main .carousel {
+        width: 500px;
+        height: 400px; }
+      .body-galeria main .carousel-item img {
+        width: 100%; } }
 
 .body-contacto {
   background-image: url(../img/fondo-contacto.png);
@@ -275,6 +304,17 @@ header {
           .body-contacto main .formulario .formulario-estilo fieldset .boton-enviar:hover {
             border: 1px solid #00b800;
             background-color: #00b800; }
+
+@media (max-width: 700px) and (min-width: 320px) {
+  .body-contacto main .formulario {
+    width: 15rem;
+    height: 30rem; }
+    .body-contacto main .formulario .formulario-estilo {
+      width: 15rem;
+      height: 30rem; }
+      .body-contacto main .formulario .formulario-estilo fieldset {
+        width: 15rem;
+        height: 30rem; } }
 
 footer {
   height: 50px;

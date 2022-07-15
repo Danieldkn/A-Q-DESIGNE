@@ -182,9 +182,9 @@ header{
                                  "texto-dos"
                                  "imagen-dos";
             overflow-y: scroll;
-            font-size: 1rem;
+            font-size: .8rem;
             .img-nosotros{
-                width: 320px;
+                width: 310px;
                 height: 220px;
             }
         }
@@ -277,12 +277,42 @@ header{
     main{
         @include basic;
         justify-content: space-evenly;
+        .carousel {
+            width: 500px;
+            height: 500px;
+        }
+        .carousel-item img {
+            width: 100%;
+        }
+    
     }
 }
 
 //diseño galeria media
 @media (max-width: 700px) and (min-width: 320px) {
+    .body-galeria{
+    background-image: url(../img/fondo-galeria.png);
+    @include fondo;
+    main{
+        display: flex;
+        width: 99%;
+        height:400px;
+        font-family: 'Julius Sans One', sans-serif;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        padding-left: .5rem;
+        .carousel {
+            width: 500px;
+            height: 400px;
+        }
+        .carousel-item img {
+            width: 100%;
+        }
     
+    }
+}
 }
 @media (max-width: 992px) and (min-width: 700px) {
     
@@ -301,11 +331,11 @@ header{
         justify-content: space-evenly;
         overflow: hidden;
         .formulario{
-            width: 20rem;
+            width:20rem;
             height: 30rem;
             text-align: center;
             .formulario-estilo{
-                width: 20rem;
+                width:20rem;
                 height: 30rem;
                 text-align: center;
                 border-radius: 3rem;
@@ -314,7 +344,7 @@ header{
                 background-color: rgba(243,243,243,0.2);
                 fieldset{
                     color: white;
-                    width: 20rem;
+                    width:20rem;
                     height: 30rem;
                     border: 1px solid white;
                     border-radius: 3rem;
@@ -366,7 +396,22 @@ header{
 
 //diseño contacto media
 @media (max-width: 700px) and (min-width: 320px) {
-    
+    .body-contacto{
+        main{
+            .formulario{
+                width: 15rem;
+                height: 30rem;
+                .formulario-estilo{
+                    width: 15rem;
+                    height: 30rem;
+                    fieldset{
+                        width: 15rem;
+                        height: 30rem;
+                    }
+                }
+            }
+        }
+    }
 }
 @media (max-width: 992px) and (min-width: 700px) {
     

@@ -1,0 +1,25 @@
+@mixin fondo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position: center;
+}
+@mixin basic {
+    display: flex;
+    width: 99%;
+    height:500px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+@mixin text {
+    display: flex;
+    width: 550px;
+    height: 250px;
+    font-size: 1.3rem;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+}
